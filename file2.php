@@ -60,8 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $NombreAle = $_SESSION["NombreAle"];
-    echo $NombreAle;   // si vous vouler tester 
-   // echo htmlspecialchars($_SERVER["PHP_SELF"]);
+    //echo $NombreAle;   // si vous vouler tester 
     if (isset($_POST['userInput'])){  //teste la saise de l'ultilisateur si le nombre est de 4 digit different
         $userInput = $_POST["userInput"];
         if (!is_numeric($userInput) || strlen($userInput) != 4 || count(array_unique(str_split($userInput))) != 4) { 
